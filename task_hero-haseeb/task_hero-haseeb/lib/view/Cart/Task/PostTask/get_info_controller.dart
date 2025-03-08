@@ -1,13 +1,14 @@
 
 
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:cocoon/view/Cart/Task/PostTask/widget/congratulationDialog.dart';
 
-import '../../widgets/custom_drop_down.dart';
+import '../../../../widgets/custom_drop_down.dart';
 
 class GetInfoController extends GetxController with LocalStorageMixin {
   DropDownItemModel? selectedState;
   DropDownItemModel? selectedCity;
-    final int totalPages = 7; 
+    final int totalPages = 6; 
  final bool forEdit;
   GetInfoController({this.forEdit=false});
   final int animationDuration = 500;
@@ -42,21 +43,14 @@ class GetInfoController extends GetxController with LocalStorageMixin {
           curve: Curves.easeInOut,
         );
         update();
-      } /*else {
+      } else {
         showDialog(
           context: Get.context!,
           builder: (context) {
-            return CustomDialog(
-              title: "Congratulations",
-              description:
-              "Your profile is set up.You will be redirected to the Home page or add your service(s)",
-              onTap: () {
-                    Get.to(()=>const CreateNewPinScreen());
-              },
-            );
+            return const CongratulationDialog();
           },
         );
-      }*/
+      }
 
   }
 

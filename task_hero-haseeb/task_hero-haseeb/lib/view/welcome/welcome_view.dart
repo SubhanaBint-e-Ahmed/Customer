@@ -30,7 +30,7 @@ class WelcomeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
 
-            AppButton.primary(title: 'Next',background:Colors.white,foregroundColor: AppColors.purple ,onPressed: ()=>Get.to(()=>const GetStartedView()),).paddingSymmetric(horizontal: 30),
+            AppButton.primary(title: 'Next',background:Colors.white,textColor: AppColors.purple ,onPressed: ()=>Get.to(()=>const GetStartedView()),).paddingSymmetric(horizontal: 30),
             29.h,
             Row(
                 mainAxisAlignment: MainAxisAlignment.end,

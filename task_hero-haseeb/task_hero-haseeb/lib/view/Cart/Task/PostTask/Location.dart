@@ -7,12 +7,11 @@ class LocationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white, // Ensures background consistency
+      color: Colors.white,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 📌 "Enter Your Location" Text
           const Text(
             "Enter Your Location",
             style: TextStyle(
@@ -25,18 +24,17 @@ class LocationScreen extends StatelessWidget {
           ),
           const SizedBox(height: 12),
 
-          // 📌 Custom TextField with SVG Icon
           Container(
             width: 380,
             height: 56,
             padding: const EdgeInsets.symmetric(horizontal: 20),
             decoration: BoxDecoration(
-              color: const Color(0xFFFAFAFA), // Background color
+              color: const Color(0xFFFAFAFA), 
               borderRadius: BorderRadius.circular(16),
             ),
             child: Row(
               children: [
-                // 📌 TextField (Hint Text)
+           
                 const Expanded(
                   child: TextField(
                     decoration: InputDecoration(
@@ -47,7 +45,7 @@ class LocationScreen extends StatelessWidget {
                         fontSize: 14,
                         height: 19.6 / 14,
                         letterSpacing: 0.2,
-                        color: Colors.black, // Hint text color
+                        color: Colors.black,
                       ),
                       border: InputBorder.none, 
                       enabledBorder: InputBorder.none, 
@@ -56,26 +54,24 @@ class LocationScreen extends StatelessWidget {
                   ),
                 ),
 
-                // 📌 SVG Icon on Right Side (Black Color)
+               
                 SvgPicture.asset(
-                  'assets/icons/Location2.svg', // Replace with your SVG file
+                  'assets/icons/Location2.svg',
                   width: 20,
                   height: 20,
-                  colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn), // ✅ Makes icon black
+                  colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn), 
                 ),
               ],
             ),
           ),
 
           const SizedBox(height: 20),
-
-          // 📌 Full-Screen Image
           Expanded(
             child: Image.asset(
-              'assets/images/Mask Group.png', // Replace with your image
+              'assets/images/Mask Group.png',
               width: 428,
               height: 1026,
-              fit: BoxFit.cover, // Ensures it covers full screen
+              fit: BoxFit.cover, 
             ),
           ),
         ],

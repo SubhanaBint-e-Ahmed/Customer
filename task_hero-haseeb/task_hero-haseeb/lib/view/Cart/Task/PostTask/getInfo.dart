@@ -1,15 +1,14 @@
 import 'package:cocoon/res/constants/imports.dart';
-import 'package:cocoon/view/onboard_question/original_documents.dart';
-import 'package:cocoon/view/onboard_question/skill_and_education.dart';
-import 'package:cocoon/view/onboard_question/Category.dart';
-import 'package:cocoon/view/onboard_question/Location.dart';
-import 'package:cocoon/view/onboard_question/scheduleTask.dart';
-import 'package:cocoon/view/onboard_question/houseSelection.dart';
-import 'package:cocoon/view/onboard_question/taskdetail.dart';
+import 'package:cocoon/view/Cart/Task/PostTask/Category.dart';
+import 'package:cocoon/view/Cart/Task/PostTask/Location.dart';
+import 'package:cocoon/view/Cart/Task/PostTask/scheduleTask.dart';
+import 'package:cocoon/view/Cart/Task/PostTask/houseSelection.dart';
+import 'package:cocoon/view/Cart/Task/PostTask/taskdetail.dart';
+import 'package:cocoon/view/Cart/Task/PostTask/Budget.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import 'get_info_controller.dart';
-import 'get_info_option_widget.dart';
+
 
 class GetInfoPage extends StatelessWidget {
   final bool forEdit;
@@ -22,20 +21,24 @@ class GetInfoPage extends StatelessWidget {
       builder: (controller) {
         return Scaffold(
           appBar: AppBar(
-        title: const Text('Post a Task', style: TextStyle(
-            fontFamily: 'Gellix',
-            fontWeight: FontWeight.w700,
-            fontSize: 24,
-            height: 28.8 / 24,
-            letterSpacing: 0,
-          ),), centerTitle: false,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context); 
-          },
-        ),
-      ),
+            title: const Text(
+              'Post a Task',
+              style: TextStyle(
+                fontFamily: 'Gellix',
+                fontWeight: FontWeight.w700,
+                fontSize: 24,
+                height: 28.8 / 24,
+                letterSpacing: 0,
+              ),
+            ),
+            centerTitle: false,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ),
           body: Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -55,14 +58,14 @@ class GetInfoPage extends StatelessWidget {
                   child: PageView(
                     physics: const NeverScrollableScrollPhysics(),
                     controller: controller.pageViewController,
-                    children:  [
-                      CategoryScreen(),
-                      LocationScreen(),
+                    children: [
+                      const CategoryScreen(),
+                      const LocationScreen(),
                       ScheduleTaskWidget(),
                       HouseSelectionScreen(),
                       TaskDetailsScreen(),
-                      SkillAndEducationView(),
-                      OriginalDocumentsView(),
+                      BudgetWidget(),
+                     
                     ],
                   ),
                 ),
@@ -72,23 +75,24 @@ class GetInfoPage extends StatelessWidget {
 
           // Custom Bottom Button
           bottomNavigationBar: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 90, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 90, vertical: 15),
             child: SizedBox(
               width: 150, // Fixed width
               height: 50, // Fixed height
               child: ElevatedButton(
                 onPressed: controller.incrementPageViewIndex,
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100), // Rounded corners
+                    borderRadius: BorderRadius.circular(100), 
                   ),
-                  backgroundColor: const Color(0xFF642D91), // Background color
+                  backgroundColor: const Color(0xFF642D91), 
                 ),
                 child: const Text(
                   'Continue',
                   style: TextStyle(
-                    color: Colors.white, // Text color
+                    color: Colors.white, 
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),

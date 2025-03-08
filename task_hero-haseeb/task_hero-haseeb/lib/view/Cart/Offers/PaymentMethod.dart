@@ -2,8 +2,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cocoon/res/constants/app_colors.dart';
-import 'package:cocoon/view/Cart/Checkout1/AddaCard.dart';
-import 'package:cocoon/view/Cart/Checkout1/PaymentCheckout.dart';
+import 'dialog.dart';
+import 'offerScreen.dart';
+
+
 
 class PaymentMethodScreen extends StatefulWidget {
   const PaymentMethodScreen({super.key});
@@ -19,6 +21,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
     {"name": "PayPal", "icon": "assets/icons/Paypal.svg"},
     {"name": "Google Pay", "icon": "assets/icons/google_pay.svg"},
     {"name": "Apple Pay", "icon": "assets/icons/apple_pay.svg"},
+     {"name": ".... .... .... .... 4679", "icon": "assets/icons/mastercard.svg"},
     {"name": "My Wallet", "icon": "assets/icons/Wallet.svg"},
   ];
 
@@ -122,7 +125,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
 
   Widget _buildAddNewCardButton() {
     return InkWell(
-      onTap: () {Get.to(() => const AddCardScreen());
+      onTap: () {
       },
       child: Container(
         width: 380,
@@ -149,10 +152,19 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
 
   Widget _buildContinueButton() {
     return ElevatedButton(
-      onPressed: selectedMethod == -1 ? null : () {Get.to(() => const Paymentcheckout());},
+ onPressed: () { 
+  Get.dialog(
+    const OrderConfirmationDialog(),
+    barrierDismissible: false, 
+  );
+},
+
+
+
+
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(193, 245, 245, 245),
-        foregroundColor: const Color.fromARGB(251, 100, 45, 145),
+        backgroundColor:  const Color.fromARGB(251, 100, 45, 145),
+        foregroundColor: const Color.fromARGB(250, 255, 255, 255),
         minimumSize: const Size(226, 50),
         padding: const EdgeInsets.fromLTRB(16, 18, 16, 18),
         shape: RoundedRectangleBorder(

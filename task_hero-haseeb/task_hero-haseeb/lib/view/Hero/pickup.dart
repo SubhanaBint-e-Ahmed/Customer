@@ -7,6 +7,7 @@ import 'package:cocoon/view/Hero/widget/pickup/pickup_orderoption.dart';
 import 'package:cocoon/view/Hero/widget/ReviewCard.dart';
 import 'package:cocoon/view/Hero/widget/pickup/CustomMapLayout.dart';
 import 'package:cocoon/view/Hero/widget/pickup/pickup_deliveryinfo.dart';
+import 'package:cocoon/view/Cart/Checkout1/Checkout1.dart';
 import'ReviewRatingScreen.dart';
 class PickupScreen extends StatelessWidget {
   const PickupScreen({super.key});
@@ -149,12 +150,11 @@ class PickupScreen extends StatelessWidget {
                         fontFamily: 'Gellix',
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
-                        height: 28.8 / 24, // Line height divided by font size
+                        height: 28.8 / 24, 
                       ),
                       textAlign: TextAlign.left,
                     ),
 
-                    // Right-aligned "View All" text
                     GestureDetector(
                       onTap: () {
                         Get.to(
@@ -205,7 +205,7 @@ class PickupScreen extends StatelessWidget {
               child: Center(
                 child: GestureDetector(
                   onTap: () {
-                   // Get.to(() => const ResturentScreen());
+                  Get.to(() => const Checkout1Screen());
                   },
                   child: const Text(
                     'View in Cart (1)',

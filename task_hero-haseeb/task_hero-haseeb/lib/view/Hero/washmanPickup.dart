@@ -8,6 +8,8 @@ import 'package:cocoon/view/Hero/widget/pickup/pickup_deliveryinfo.dart';
 import 'package:cocoon/view/Hero/widget/washmanAbout.dart';
 import 'package:cocoon/view/Hero/widget/WashmanProductDetail.dart';
 import 'package:cocoon/view/Hero/widget/CustomReviewBar.dart';
+import 'package:cocoon/view/Cart/Checkout1/Checkout1.dart';
+
 class WashmanPickupScreen extends StatelessWidget {
   const WashmanPickupScreen({super.key});
 
@@ -167,7 +169,7 @@ class WashmanPickupScreen extends StatelessWidget {
               child: Center(
                 child: GestureDetector(
                   onTap: () {
-                   // Get.to(() => const ResturentScreen());
+                   Get.to(() => const Checkout1Screen());
                   },
                   child: const Text(
                     'View in Cart (1)',

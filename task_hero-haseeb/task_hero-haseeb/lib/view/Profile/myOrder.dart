@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:cocoon/res/constants/app_colors.dart';
-import 'package:cocoon/view/Cart/widget/EmptyCartScreen.dart';
+import 'package:cocoon/view/Profile/EmptyOrderScreen.dart';
 import 'package:cocoon/view/Cart/Task/EmptyTaskScreen.dart';
 //import 'package:cocoon/view/Cart/widget/TaskItem.dart';
-import 'package:cocoon/view/Cart/FoodOrderList.dart';
+import 'package:cocoon/view/Profile/CurrentOrderScreen.dart';
 import 'package:cocoon/view/Cart/Task/TaskList.dart';
 import 'package:cocoon/view/Cart/Offers/appartCleaning.dart';
 import 'package:cocoon/view/Cart/Offers/EmptyOfferScreen.dart';
 
-class CartScreen extends StatefulWidget {
-  const CartScreen({super.key});
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
 
   @override
-  _CartScreenState createState() => _CartScreenState();
+  _ProfileScreenState createState() => _ProfileScreenState();
 }
 
-class _CartScreenState extends State<CartScreen>
+class _ProfileScreenState extends State<ProfileScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   bool _isCartEmpty = true;
@@ -34,7 +34,7 @@ class _CartScreenState extends State<CartScreen>
     super.dispose();
   }
 
-  void _updateCartScreen() {
+  void _updateCurrentScreen() {
     setState(() {
       _isCartEmpty = false;
 
@@ -63,7 +63,7 @@ class _CartScreenState extends State<CartScreen>
           automaticallyImplyLeading: false,
           elevation: 0,
           title: const Text(
-            'Cart',
+            'My Orders',
             style: TextStyle(
               fontFamily: 'Gellix',
               fontWeight: FontWeight.w700,
@@ -95,9 +95,9 @@ class _CartScreenState extends State<CartScreen>
                   letterSpacing: 0.2,
                 ),
                 tabs: const [
-                  Tab(text: "Cart"),
-                  Tab(text: "Tasks"),
-                  Tab(text: "Offers"),
+                  Tab(text: "Current"),
+                  Tab(text: "Completed"),
+                  Tab(text: "Reviewed"),
                 ],
               ),
             ),
@@ -109,8 +109,8 @@ class _CartScreenState extends State<CartScreen>
         physics: const NeverScrollableScrollPhysics(),
         children: [
           _isCartEmpty
-              ? EmptyCartScreen(onIconTap: _updateCartScreen)
-              : const FoodOrderList(),
+              ? EmptyOrderScreen(onIconTap: _updateCurrentScreen)
+              :  OrderCurrentPage(),
           _isTasksEmpty
               ? EmptyTaskScreen(onIconTap: _updateTaskScreen)
               : const TaskList(),

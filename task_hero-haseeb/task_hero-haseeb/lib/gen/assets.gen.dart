@@ -477,13 +477,13 @@ class $AssetsImagesGen {
   AssetGenImage get user => const AssetGenImage('assets/images/user.png');
 
   /// File path: assets/images/w1.png
-  AssetGenImage get w1 => const AssetGenImage('assets/images/w1.png');
+  AssetGenImage get w1 => const AssetGenImage('assets/images/Asset 1w231 1.png');
 
   /// File path: assets/images/w2.png
-  AssetGenImage get w2 => const AssetGenImage('assets/images/w2.png');
+  AssetGenImage get w2 => const AssetGenImage('assets/images/Asset 1.png');
 
   /// File path: assets/images/w3.png
-  AssetGenImage get w3 => const AssetGenImage('assets/images/w3.png');
+  AssetGenImage get w3 => const AssetGenImage('assets/images/Asset 1w21.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [

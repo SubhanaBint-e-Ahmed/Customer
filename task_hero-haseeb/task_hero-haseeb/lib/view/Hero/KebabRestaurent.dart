@@ -18,7 +18,7 @@ class ResturentScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Title aligned to the left
+          
             const Text(
               'Hero',
               style: TextStyle(

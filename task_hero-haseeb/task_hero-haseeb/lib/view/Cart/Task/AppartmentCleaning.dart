@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:cocoon/res/constants/imports.dart';
 
 class AppartmentcleaningScreen extends StatelessWidget {
@@ -300,7 +299,7 @@ class AppartmentcleaningScreen extends StatelessWidget {
     );
   }
 
-  // Fixed Location Map
+
   Widget _buildLocationMap(double screenWidth) {
     return Container(
       width: 332,

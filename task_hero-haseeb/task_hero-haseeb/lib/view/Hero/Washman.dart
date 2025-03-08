@@ -5,7 +5,7 @@ import 'package:cocoon/view/Hero/widget/taskRating.dart';
 import 'package:cocoon/view/Hero/widget/CustomReviewBar.dart';
 import 'package:cocoon/view/Hero/widget/timezone.dart';
 import 'package:cocoon/view/Hero/widget/ReviewCard.dart';
-import 'package:cocoon/view/Hero/Hireme.dart';
+//import 'package:cocoon/view/Hero/Hireme.dart';
 import 'package:cocoon/view/Hero/WashmanService.dart';
 
 class WashmanScreen extends StatelessWidget {
@@ -154,7 +154,7 @@ class WashmanScreen extends StatelessWidget {
                   const SizedBox(width: 8),
                   ElevatedButton.icon(
                     onPressed: () {
-                      Get.to(() => const HiremeScreen());
+                      //Get.to(() => const HiremeScreen());
                     },
                     icon: SvgPicture.asset(
                       'assets/icons/Tick Square.svg',

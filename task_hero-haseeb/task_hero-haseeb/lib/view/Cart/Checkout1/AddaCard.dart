@@ -65,12 +65,12 @@ class AddCardScreen extends StatelessWidget {
               const SizedBox(height: 16),
 
              Row(
-  mainAxisAlignment: MainAxisAlignment.spaceBetween, // Ensures proper spacing
+  mainAxisAlignment: MainAxisAlignment.spaceBetween, 
   children: [
     Expanded(
       child: _buildInputContainer("Expiry Date", isExpiryField: true),
     ),
-    const SizedBox(width: 2), // Reduced spacing
+    const SizedBox(width: 2), 
     Expanded(
       child: _buildInputContainer("CVV"),
     ),

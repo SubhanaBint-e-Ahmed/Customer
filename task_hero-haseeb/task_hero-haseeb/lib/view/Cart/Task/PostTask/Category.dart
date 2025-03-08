@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:cocoon/res/constants/imports.dart';
 
 class CategoryScreen extends StatefulWidget {
@@ -12,8 +11,8 @@ class _CategoryScreenState extends State<CategoryScreen> {
   String? selectedCategory;
   String? selectedSubCategory;
 
-  final List<String> categories = [ "Cleaning"];
-  final List<String> subCategories = [ "Cleaning Apartment"];
+  final List<String> categories = ["Cleaning"];
+  final List<String> subCategories = ["Cleaning Apartment"];
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
     );
   }
 
- 
   Widget buildText(String text) {
     return Text(
       text,
@@ -73,46 +71,38 @@ class _CategoryScreenState extends State<CategoryScreen> {
           ),
         ],
       ),
-      child: Row(
-        children: [
-          Expanded(
-            child: DropdownButtonHideUnderline(
-              child: DropdownButton<String>(
-                isExpanded: true, 
-                value: selectedValue == "Choose" ? null : selectedValue,
-                hint: const Text(
-                  "Choose",
-                  style: TextStyle(
-                    fontSize: 16, 
-                    fontWeight: FontWeight.w600, 
-                    color: Colors.black,
-                  ),
-                ), 
-                items: items
-                    .map((item) => DropdownMenuItem(
-                          value: item,
-                          child: Text(
-                            item,
-                            style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600, 
-                    color: Colors.black,
-                  ),
-                          ),
-                        ))
-                    .toList(),
-                onChanged: onChanged, 
-                icon: const SizedBox.shrink(), 
-              ),
+      child: DropdownButtonHideUnderline(
+        child: DropdownButton<String>(
+          isExpanded: true,
+          value: selectedValue,
+          hint: const Text(
+            "Choose",
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
             ),
           ),
-          
-          SvgPicture.asset(
-                 'assets/icons/Arrow 2.svg',
-            width: 20,
-            height: 20,
-                ),
-        ],
+          items: items
+              .map((item) => DropdownMenuItem(
+                    value: item,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20), 
+                      child: Text(
+                        item,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ))
+              .toList(),
+          onChanged: onChanged,
+          icon: const Icon(Icons.keyboard_arrow_down, color: Colors.black),
+          itemHeight: 64, 
+        ),
       ),
     );
   }

@@ -58,6 +58,7 @@ class SetYourFingerprint extends StatelessWidget {
                   elevation: 0,
                   background: const Color(0xFFEFF6FF),
                  foregroundColor: const Color.fromARGB(255, 125, 4, 224),
+                 textColor: AppColors.purple,
                 ),
                 AppButton.primary(
                   width: 135,

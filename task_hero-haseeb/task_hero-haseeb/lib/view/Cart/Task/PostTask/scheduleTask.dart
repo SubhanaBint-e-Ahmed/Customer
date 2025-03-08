@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:cocoon/res/constants/app_colors.dart';
 
 class ScheduleTaskWidget extends StatefulWidget {
+  const ScheduleTaskWidget({super.key});
+
   @override
   _ScheduleTaskWidgetState createState() => _ScheduleTaskWidgetState();
 }
@@ -22,17 +24,17 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
           _buildRadioOption('As soon as possible', false),
           _buildRadioOption('Schedule task', true),
           if (_scheduleTask) ...[
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _buildStyledText('Schedule'),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             _buildDateSelectionRow(),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _buildTimePickerRow('From', _fromTime, (time) {
               setState(() {
                 _fromTime = time;
               });
             }),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             _buildTimePickerRow('To', _toTime, (time) {
               setState(() {
                 _toTime = time;
@@ -79,7 +81,7 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
   Widget _buildStyledText(String text) {
     return Text(
       text,
-      style: TextStyle(
+      style: const TextStyle(
         fontFamily: 'Gellix',
         fontWeight: FontWeight.w600,
         fontSize: 18,
@@ -95,10 +97,10 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
       child: Row(
         children: [
           _buildDateButton('Today', DateTime.now()),
-          SizedBox(width: 8),
-          _buildDateButton('Tomorrow', DateTime.now().add(Duration(days: 1))),
-          SizedBox(width: 8),
-          _buildDateButton('Mon', DateTime.now().add(Duration(days: 2))),
+          const SizedBox(width: 8),
+          _buildDateButton('Tomorrow', DateTime.now().add(const Duration(days: 1))),
+          const SizedBox(width: 8),
+          _buildDateButton('Mon', DateTime.now().add(const Duration(days: 2))),
         ],
       ),
     );
@@ -116,10 +118,10 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
       child: Container(
         width: 110,
         height: 95,
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 12),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: isSelected ? Color(0xFF642D91) : Colors.grey, width: 2),
+          border: Border.all(color: isSelected ? const Color(0xFF642D91) : Colors.grey, width: 2),
           color: Colors.white,
         ),
         child: Column(
@@ -127,12 +129,12 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
           children: [
             Text(
               text,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Text(
               '${_getMonthName(date.month)} ${date.day}',
-              style: TextStyle(fontSize: 14, color: Colors.black54),
+              style: const TextStyle(fontSize: 14, color: Colors.black54),
             ),
           ],
         ),
@@ -152,7 +154,7 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _buildStyledText(label),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         _buildTimeDropdown(time, onTimeChanged),
       ],
     );
@@ -162,15 +164,15 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
     return Container(
       width: 380,
       height: 56,
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        color: Color(0xFFFAFAFA),
+        color: const Color(0xFFFAFAFA),
         borderRadius: BorderRadius.circular(16),
       ),
       child: DropdownButtonHideUnderline(
         child: DropdownButton<TimeOfDay>(
           value: time ?? _getNearestTime(),
-          icon: Icon(Icons.arrow_drop_down, color: Colors.black),
+          icon: const Icon(Icons.arrow_drop_down, color: Colors.black),
           isExpanded: true,
           onChanged: (TimeOfDay? newValue) {
             if (newValue != null) {
@@ -190,7 +192,7 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
 
   List<DropdownMenuItem<TimeOfDay>> _generateTimeDropdownItems() {
     List<DropdownMenuItem<TimeOfDay>> items = [
-      DropdownMenuItem(
+      const DropdownMenuItem(
         value: null,
         child: Text("Select Time"),
       )
@@ -199,7 +201,7 @@ class _ScheduleTaskWidgetState extends State<ScheduleTaskWidget> {
       items.add(
         DropdownMenuItem(
           value: time,
-          child: Text(time.format(context),style: TextStyle(fontSize: 16, color: const Color.fromARGB(255, 0, 0, 0)),),
+          child: Text(time.format(context),style: const TextStyle(fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)),),
         ),
       );
     }

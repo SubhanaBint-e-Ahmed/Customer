@@ -66,7 +66,7 @@ class ThemeLight extends AppTheme {
 
 
   @override
-  Color get onPrimary => const Color(0xFFFFFFFF);
+  Color get onPrimary => const Color(0xffFFFFFF);
 
   @override
   Color get secondary => const Color(0xFFD3E1FF);

@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/view/Cart/Task/TaskItem.dart';
-import 'package:cocoon/view/onboard_question/getInfo.dart';
+import 'package:cocoon/view/Cart/Task/PostTask/getInfo.dart';
 
 class TaskList extends StatefulWidget {
   const TaskList({super.key});
