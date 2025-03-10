@@ -18,7 +18,7 @@ class ServiceDetailScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Title aligned to the left
+            
             const Text(
               'Service',
               style: TextStyle(

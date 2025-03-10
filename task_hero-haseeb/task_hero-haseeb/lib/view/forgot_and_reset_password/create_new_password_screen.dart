@@ -72,7 +72,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                           description:
                               "Your profile is set up.You will be redirected to the Home page or add your service(s)",
                           onTap: () {
-                            Get.to(()=>const LoginPage());
+                            Get.to(()=> LoginPage());
                           },
                         );
                       },

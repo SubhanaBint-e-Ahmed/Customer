@@ -16,7 +16,7 @@ class $AssetsIconsGen {
   String get boost => 'assets/icons/Boost.svg';
 
   /// File path: assets/icons/Buy.svg
-  String get buy => 'assets/icons/Buy.svg';
+  String get buy => 'assets/icons/buy.svg';
 
   /// File path: assets/icons/Camera.svg
   String get camera => 'assets/icons/Camera.svg';
@@ -70,16 +70,16 @@ class $AssetsIconsGen {
   String get shieldDone => 'assets/icons/Shield Done.svg';
 
   /// File path: assets/icons/Star.svg
-  String get star => 'assets/icons/Star.svg';
+  String get star => 'assets/icons/Star2.svg';
 
   /// File path: assets/icons/Swap.svg
   String get swap => 'assets/icons/Swap.svg';
 
   /// File path: assets/icons/Wallet.svg
-  String get wallet => 'assets/icons/Wallet.svg';
+  String get wallet => 'assets/icons/Wallet2.svg';
 
   /// File path: assets/icons/add.svg
-  String get add => 'assets/icons/add.svg';
+  String get add => 'assets/icons/AddCard.svg';
 
   /// File path: assets/icons/add2.svg
   String get add2 => 'assets/icons/add2.svg';
@@ -121,7 +121,7 @@ class $AssetsIconsGen {
   String get done => 'assets/icons/done.svg';
 
   /// File path: assets/icons/edit.svg
-  String get edit => 'assets/icons/edit.svg';
+  String get edit => 'assets/icons/Edit.svg';
 
   /// File path: assets/icons/email.svg
   String get email => 'assets/icons/email.svg';
@@ -145,7 +145,7 @@ class $AssetsIconsGen {
   String get folder => 'assets/icons/folder.svg';
 
   /// File path: assets/icons/google.svg
-  String get google => 'assets/icons/google.svg';
+  String get google => 'assets/icons/google_pay.svg';
 
   /// File path: assets/icons/grid.svg
   String get grid => 'assets/icons/grid.svg';
@@ -184,10 +184,10 @@ class $AssetsIconsGen {
   String get logo => 'assets/icons/Logo.svg';
 
   /// File path: assets/icons/logo_small.svg
-  String get logoSmall => 'assets/icons/Logo (2).svg';
+  String get logoSmall => 'assets/icons/logo_small.svg';
 
   /// File path: assets/icons/logos_mastercard.svg
-  String get logosMastercard => 'assets/icons/logos_mastercard.svg';
+  String get logosMastercard => 'assets/icons/mastercard.svg';
 
   /// File path: assets/icons/map.svg
   String get map => 'assets/icons/map.svg';
@@ -247,13 +247,13 @@ class $AssetsIconsGen {
   String get tPlus => 'assets/icons/tPlus.svg';
 
   /// File path: assets/icons/tWallet.svg
-  String get tWallet => 'assets/icons/tWallet.svg';
+  String get tWallet => 'assets/icons/Wallet.svg';
 
   /// File path: assets/icons/tag.svg
   String get tag => 'assets/icons/tag.svg';
 
   /// File path: assets/icons/tapple.svg
-  String get tapple => 'assets/icons/tapple.svg';
+  String get tapple => 'assets/icons/apple_pay.svg';
 
   /// File path: assets/icons/tarrowDown.svg
   String get tarrowDown => 'assets/icons/tarrowDown.svg';
@@ -280,7 +280,7 @@ class $AssetsIconsGen {
   String get tlocation => 'assets/icons/tlocation.svg';
 
   /// File path: assets/icons/tpaypal.svg
-  String get tpaypal => 'assets/icons/tpaypal.svg';
+  String get tpaypal => 'assets/icons/Paypal.svg';
 
   /// File path: assets/icons/twebsite.svg
   String get twebsite => 'assets/icons/twebsite.svg';

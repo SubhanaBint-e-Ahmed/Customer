@@ -50,21 +50,7 @@ class RecentSearchesScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 4),
-                // Toggle button
-                Transform.scale(
-                  scale: 1,
-                  child: Switch(
-                    value: isToggled,
-                    onChanged: (bool value) {
-                      isToggled = value;
-                    },
-                    activeColor: AppColors.purple,
-                    inactiveThumbColor: Colors.white,
-                    inactiveTrackColor: AppColors.lightGray,
-                    thumbColor: WidgetStateProperty.all(Colors.white),
-                    trackColor: WidgetStateProperty.all(AppColors.purple),
-                  ),
-                ),
+                 Switch(value: true, onChanged: (v) {})
               ],
             ),
             const SizedBox(height: 20),

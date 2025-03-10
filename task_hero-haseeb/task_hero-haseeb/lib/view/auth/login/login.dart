@@ -1,22 +1,28 @@
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/auth/signup/signup_page.dart';
 import 'package:cocoon/view/forgot_and_reset_password/reset_password_screen.dart';
+import 'package:cocoon/view/main_activity.dart';
 import 'package:cocoon/view_models/models/welcome_view_model/signup_view_model.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
+import '../../../gen/assets.gen.dart';
+import '../../../res/components/app_bar.dart';
+import '../../../utils/mixins/validators.dart';
 import '../../../widgets/custom_rich_text.dart';
 
 class LoginPage extends StatelessWidget with Validators {
-  const LoginPage({super.key});
-
+   LoginPage({super.key});
+   final formKey=GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SignUpViewModel>(
       init: SignUpViewModel(),
       builder: (controller) {
         return Scaffold(
-          appBar: const SimpleAppBar(),
+          appBar: SimpleAppBar(),
           body: SingleChildScrollView(
             child: Form(
-              //  key: controller.formKey,
+                key: formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -43,13 +49,11 @@ class LoginPage extends StatelessWidget with Validators {
                     isPasswordField: true,
                     //controller: controller.tfPassword,
                   ),
-
                   20.h,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Checkbox(
-                          value: false, onChanged: (v) {}),
+                      Checkbox(value: false, onChanged: (v) {}),
                       7.w,
                       Text(
                         'Remember me',
@@ -58,27 +62,35 @@ class LoginPage extends StatelessWidget with Validators {
                     ],
                   ),
                   20.h,
-
                   AppButton.primary(
                     title: "Sign in",
                     elevation: 5,
+                    onPressed: () {
+                     if(formKey.currentState!.validate()) {
+                        Get.to(() => MainActivity());
+                      }
+                    },
                     //onPressed: controller.onSingUp,
                   ),
                   14.h,
                   InkWell(
-                    onTap: ()=>Get.to(()=>const ResetPasswordScreen()),
+                    onTap: () => Get.to(() => ResetPasswordScreen()),
                     child: Padding(
-                      padding: const EdgeInsets.all(8),
-                        child: Text('Forgot the password?',style: context.bodyLarge!.copyWith(color: context.primary,fontWeight: FontWeight.bold),)),
+                        padding: EdgeInsets.all(8),
+                        child: Text(
+                          'Forgot the password?',
+                          style: context.bodyLarge!.copyWith(
+                              color: context.primary,
+                              fontWeight: FontWeight.bold),
+                        )),
                   ),
                   14.h,
-
                   Row(
                     children: [
                       Expanded(
                           child: Divider(
-                            color: context.extraLightGrey,
-                          )),
+                        color: context.extraLightGrey,
+                      )),
                       10.w,
                       Text(
                         'or continue with',
@@ -87,8 +99,8 @@ class LoginPage extends StatelessWidget with Validators {
                       10.w,
                       Expanded(
                           child: Divider(
-                            color: context.extraLightGrey,
-                          ))
+                        color: context.extraLightGrey,
+                      ))
                     ],
                   ),
                   20.h,
@@ -119,7 +131,7 @@ class LoginPage extends StatelessWidget with Validators {
                   CustomRichText(
                     text: 'Don’t have an account?',
                     highlightedText: 'Sign up',
-                    onTap: ()=>Get.to(()=>const SignupPage()),
+                    onTap: () => Get.to(() => SignupPage()),
                   ),
                   20.h,
                 ],

@@ -1,37 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:cocoon/res/constants/app_colors.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cocoon/view/Hero/George.dart';
 import 'package:get/get.dart';
 
-class FilteredPeople extends StatelessWidget {
-  const FilteredPeople({super.key});
+class HeroScreen extends StatelessWidget {
+  const HeroScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final List<String> personNames = [
       'George James',
       'George James',
-      'George James',
-      'George James',
-      'George James',
-      'George James',
+      
     ];
-    final List<String> ratings = ['4.8', '4.8', '4.8', '4.8', '4.8', '4.8'];
+    final List<String> ratings = ['4.8', '4.8', ];
     final List<String> followers = [
       '900+',
       '900+',
-      '900+',
-      '900+',
-      '900+',
-      '900+',
+      
     ];
     final List<String> images = [
       "assets/images/Rectangle 85.png",
       "assets/images/Rectangle 85 (1).png",
-      "assets/images/Girl.png",
-      "assets/images/Rectangle 85.png",
-      "assets/images/Rectangle 85 (1).png",
-      "assets/images/Girl.png",
     ];
 
     return SingleChildScrollView(
@@ -112,11 +103,11 @@ class FilteredPeople extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            const Icon(
-                              Icons.bookmark_outline,
-                              color: Colors.grey,
-                              size: 21,
-                            ),
+                         SvgPicture.asset(
+                                'assets/icons/filledBookmark.svg',
+                                height: 20,
+                                width: 20,
+                              )
                           ],
                         ),
                         const SizedBox(height: 8),

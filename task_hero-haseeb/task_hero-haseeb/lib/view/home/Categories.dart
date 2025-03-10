@@ -42,13 +42,13 @@ class _CategoriesScreenState extends State<CategoriesScreen> with TickerProvider
           },
         ),
         title: const Row(
-          mainAxisAlignment: MainAxisAlignment.start, // Aligns to the left
+          mainAxisAlignment: MainAxisAlignment.start, 
           children: [
             Text(
               'Categories',
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 20.0, // Reduced font size
+                fontSize: 20.0, 
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -56,7 +56,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> with TickerProvider
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(22.0), // Apply padding to the entire body
+        padding: const EdgeInsets.all(22.0), 
         child: Column(
           children: [
             // Search bar

@@ -12,7 +12,7 @@ class LaundryScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            // Implement back navigation logic here
+           
           },
         ),
         actions: [
@@ -23,7 +23,7 @@ class LaundryScreen extends StatelessWidget {
               width: 20.0,
             ),
             onPressed: () {
-              // Implement search functionality here
+            
             },
           ),
         ],

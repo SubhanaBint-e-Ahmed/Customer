@@ -4,7 +4,7 @@ import 'package:cocoon/view/home/home_view.dart';
 import 'package:cocoon/view/inbox/inbox.dart';
 import 'package:cocoon/view/Search/SearchView.dart';
 import 'package:cocoon/view/Cart/Cart.dart';
-import 'package:cocoon/view/Profile/myOrder.dart';
+import 'package:cocoon/view/Profile/setting_view.dart';
 
 class MainActivity extends StatelessWidget {
   const MainActivity({super.key});
@@ -137,7 +137,7 @@ class NavigationControllerGetx extends GetxController {
      const SearchView(),
     const InboxView(),
    const CartScreen(),
-   const ProfileScreen(),
+   const SettingView (),
   ];
 
   changeSelectedIndex(int index) {

@@ -46,7 +46,7 @@ class PeopleScreenState extends State<PeopleScreen> {
               suffixIcon: 'assets/icons/Filterfilled.svg',
               onChange: (value) {
                 setState(() {
-                  searchText = value.trim(); // Update search query dynamically
+                  searchText = value.trim();
                 });
               },
               onSuffixTap: () {

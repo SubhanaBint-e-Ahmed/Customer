@@ -1,7 +1,7 @@
 import 'package:cocoon/view/auth/login/login.dart';
 import 'package:cocoon/view/auth/signup/signup_page.dart';
 import 'package:cocoon/widgets/custom_rich_text.dart';
-import '../../res/constants/app_colors.dart'; // Added import for AppColors
+import '../../res/constants/app_colors.dart';
 import '../../res/constants/imports.dart';
 
 class GetStartedView extends StatelessWidget {
@@ -68,13 +68,13 @@ class GetStartedView extends StatelessWidget {
           AppButton.primary(
             width: 300,
             title: 'Sign in with password',
-            onPressed: () => Get.to(() => const LoginPage()),
+            onPressed: () => Get.to(() =>  LoginPage()),
           ),
           20.h,
           CustomRichText(
             text: 'Don’t have an account?',
             highlightedText: 'Sign up',
-            onTap: () => Get.to(() => const SignupPage()),
+            onTap: () => Get.to(() =>  SignupPage()),
           ),
           20.h,
         ]).paddingAll(20),

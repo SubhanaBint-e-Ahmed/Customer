@@ -121,7 +121,7 @@ class SignupPage extends StatelessWidget with Validators {
                   CustomRichText(
                     text: 'Already have an account?',
                     highlightedText: 'Sign in',
-                    onTap: ()=>Get.to(()=>const LoginPage()),
+                    onTap: ()=>Get.to(()=> LoginPage()),
                   ),
                   20.h,
                 ],

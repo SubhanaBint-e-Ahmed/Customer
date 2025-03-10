@@ -19,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Title aligned to the left
+        
             const Text(
               'Hero',
               style: TextStyle(
@@ -208,7 +208,7 @@ class ProfileScreen extends StatelessWidget {
                       onTap: () {
                         Get.to(
                           () => const ServiceDetailScreen(),
-                        ); // Navigate to the next screen
+                        ); 
                       },
                       child: const Text(
                         'View All',
