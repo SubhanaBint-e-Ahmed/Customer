@@ -1,5 +1,6 @@
 
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:cocoon/view/new_module/home/home2_view.dart';
 
 class OrderConfirmationDialog extends StatelessWidget {
   const OrderConfirmationDialog({super.key});
@@ -77,7 +78,7 @@ class OrderConfirmationDialog extends StatelessWidget {
                   const SizedBox(height: 12),
                   ElevatedButton(
                     onPressed: () {
-                  
+                   Get.to(() =>HomeView2 ());
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 246, 253, 247),

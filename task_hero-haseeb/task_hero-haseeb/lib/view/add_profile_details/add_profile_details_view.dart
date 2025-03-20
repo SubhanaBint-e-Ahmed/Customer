@@ -82,12 +82,12 @@ class AddProfileDetailsView extends StatelessWidget with DateTimeMixin {
                 ),
                 const SizedBox(height: 20.0),
                 CustomTextField(
-                  controller: dateController, // Use the dateController
+                  controller: dateController, 
                   hintText: 'Date of Birth',
-                  //   suffixIcon: Assets.icons.Calender,
+             
                   textColor: Colors.black,
                   onTap: () {
-                    // Handle Date Picker Popup
+              
                     _selectDate(context, dateController);
                   },
                 ),
@@ -163,14 +163,14 @@ class AddProfileDetailsView extends StatelessWidget with DateTimeMixin {
     );
   }
 
-  // Update _selectDate method to accept TextEditingController
+ 
   void _selectDate(
       BuildContext context, TextEditingController dateController) async {
     final DateTime? selectedDate = await pickDate(context);
     if (selectedDate != null) {
-      // Update the text field with the selected date
+    
       dateController.text =
-          '${selectedDate.toLocal()}'.split(' ')[0]; // Format the date
+          '${selectedDate.toLocal()}'.split(' ')[0]; 
     }
   }
 }

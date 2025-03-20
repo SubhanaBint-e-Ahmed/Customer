@@ -66,7 +66,7 @@ class _SetLocationViewState extends State<SetLocationView> {
                 30.h,
                 AppButton.primary(
                   title: 'Save & continue',
-                  onPressed: () => Get.off(() => const AddProfileDetailsView()),
+                  onPressed: () => Get.back(),
                 ),
                 40.h,
               ],
